@@ -37,7 +37,6 @@ _Math magicians is a website for all fans of mathematics. It is a Single Page Ap
 - JavaScript
 - Webpack
 - React
-- [Linters](https://github.com/microverseinc/linters-config/tree/master/react-redux)
 
 <!-- Features -->
 
