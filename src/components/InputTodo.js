@@ -26,18 +26,32 @@ const InputTodo = ({ addTodoItem }) => {
   };
 
   return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Add Todo..."
-          value={title}
-          onChange={handleChange}
-        />
-        <button>Submit</button>
-      </form>
-      <span>{message}</span>
-    </>
+    <div className={`row m-1 d-flex justify-content-center align-items-center`}>
+      <div className={`col`}>
+        <form
+          className={`row g-3`}
+          onSubmit={handleSubmit}
+        >
+          <div className={`col-10`}>
+            <input
+              className={`form-control form-control-md`}
+              type="text"
+              placeholder="Add Todo..."
+              value={title}
+              onChange={handleChange}
+            />
+          </div>
+          <div className={`col-auto`}>
+            <button
+              className={`btn btn-success btn-md`}
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+        <span>{message}</span>
+      </div>
+    </div>
   );
 };
 export default InputTodo;

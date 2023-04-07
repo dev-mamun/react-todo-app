@@ -6,14 +6,26 @@
  ****************************************** */
 const TodoItem = ({ itemProp, handleChange, delTodo }) => {
 
-  return <li>
-    <input
-      type="checkbox"
-      checked={itemProp.completed}
-      onChange={() => handleChange(itemProp.id)}
-    />
-    <button onClick={() => delTodo(itemProp.id)}>Delete</button>
-    {itemProp.title}
-  </li>;
+  return (
+    <li className={`list-group-item d-flex justify-content-start align-items-center`}>
+      <input
+        className={`form-check-input m-0`}
+        type="checkbox"
+        id={itemProp.id}
+        checked={itemProp.completed}
+        onChange={() => handleChange(itemProp.id)}
+      />
+      <label
+        className={`form-check-label d-flex justify-content-center align-items-center m-2`}
+        htmlFor={itemProp.id}>
+        {itemProp.title}
+      </label>
+      <button
+        className={`btn btn-danger btn-sm`}
+        onClick={() => delTodo(itemProp.id)}>
+        Delete
+      </button>
+    </li>
+  );
 };
 export default TodoItem;

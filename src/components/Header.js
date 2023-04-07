@@ -6,9 +6,9 @@
  ****************************************** */
 const Header = () => {
   return (
-    <header>
-      <h1>todos</h1>
-      <p>Items will persist in the browser local storage</p>
+    <header className={`p-3`}>
+      <h1>My TODO</h1>
+      <p>Using a to-do list can help you stay organized and on track with your tasks and responsibilities </p>
     </header>
   );
 };

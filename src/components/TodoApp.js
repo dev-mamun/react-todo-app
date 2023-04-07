@@ -9,10 +9,10 @@ import TodosLogic from "./TodosLogic";
 
 const TodoApp = () => {
   return (
-    <>
+    <div className="container-sm">
       <Header />
       <TodosLogic />
-    </>
+    </div>
   );
 };
 export default TodoApp;
